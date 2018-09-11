@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="sample">
+    <Basepaths>/sample</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1536546719137</CreatedAt>
+    <CreatedBy>gonzalezruben@google.com</CreatedBy>
+    <Description>Generated SOAP to API proxyMTOMSample</Description>
+    <DisplayName>MTOMSample</DisplayName>
+    <LastModifiedAt>1536546719137</LastModifiedAt>
+    <LastModifiedBy>gonzalezruben@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:49f17e325ea231491a12ede29cbea6696bf3e52c9a3d92745a9105a608ff2041073ce18e3ecbe83e9a4399923314f8fb8f6ebdc11cf75dba2f1b1cfc68c5de02</ManifestVersion>
+    <Policies>
+        <Policy>attachment-build-soap</Policy>
+        <Policy>attachment-extract-query-param</Policy>
+        <Policy>extract-format</Policy>
+        <Policy>get-response-soap-body-xml</Policy>
+        <Policy>get-response-soap-body</Policy>
+        <Policy>remove-empty-nodes</Policy>
+        <Policy>remove-namespaces</Policy>
+        <Policy>return-generic-error-accept</Policy>
+        <Policy>return-generic-error</Policy>
+        <Policy>return-open-api</Policy>
+        <Policy>set-response-soap-body-accept</Policy>
+        <Policy>set-response-soap-body</Policy>
+        <Policy>set-target-url</Policy>
+        <Policy>unknown-resource-xml</Policy>
+        <Policy>unknown-resource</Policy>
+        <Policy>xml-to-json</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>xsl://remove-empty-nodes.xslt</Resource>
+        <Resource>xsl://remove-namespaces.xslt</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

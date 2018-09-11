@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="true" enabled="true" name="attachment-build-soap">
+    <DisplayName>attachment Build SOAP</DisplayName>
+    <Set>
+        <Verb>POST</Verb>
+    </Set>
+    <AssignVariable>
+        <Name>forward.target.url</Name>
+        <Value>http://localhost:8080/axis2/services/MTOMSample</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.soap.request</Name>
+        <Value>
+            <![CDATA[
+            <s11:Envelope xmlns:s11="http://schemas.xmlsoap.org/soap/envelope/">  <s11:Body>    <ns1:AttachmentRequest xmlns:ns1="http://ws.apache.org/axis2/mtomsample/">
+                <!-- optional -->      <ns1:fileName>{fileName}</ns1:fileName>
+                <!-- optional -->      <ns1:binaryData>
+                <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:{uuid}"/>
+            </ns1:binaryData>    </ns1:AttachmentRequest>  </s11:Body>
+            </s11:Envelope>
+            ]]>
+        </Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="true" enabled="true" name="attachment-extract-query-param">
+    <DisplayName>attachment Extract Query Param</DisplayName>
+    <Source>request</Source>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+<QueryParam name="fileName">
+<Pattern ignoreCase="true">{fileName}</Pattern>
+</QueryParam>
+<QueryParam name="binaryData">
+<Pattern ignoreCase="true">{binaryData}</Pattern>
+</QueryParam>
+<QueryParam name="contentType">
+<Pattern ignoreCase="true">{contentType}</Pattern>
+</QueryParam>
+</ExtractVariables>

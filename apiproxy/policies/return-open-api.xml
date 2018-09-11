@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="return-open-api">
+    <DisplayName>Return Open API</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+        	<StatusCode>200</StatusCode>
+            <Headers>
+            	<Header name="Content-Type">application/json</Header>
+            </Headers>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "MTOMSample",
+    "description": "A OAS document generated from WSDL",
+    "termsOfService": "",
+    "contact": {
+      "name": "API Team"
+    },
+    "license": {
+      "name": "Apache 2.0"
+    }
+  },
+  "host": "@request.header.host#",
+  "basePath": "/sample",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/attachment": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/AttachmentResponse"
+            }
+          }
+        },
+        "description": "Implements WSDL operation attachment",
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "binaryData",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AttachmentRequest": {
+      "properties": {
+        "fileName": {
+          "type": "string"
+        },
+        "binaryData": {
+          "type": "string",
+          "format": "byte"
+        }
+      },
+      "type": "object"
+    }
+  }
+}</Payload>
+        </Set>
+    </FaultResponse>
+</RaiseFault>
