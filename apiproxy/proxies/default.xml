@@ -70,7 +70,6 @@
     <VirtualHost>default</VirtualHost>
 <VirtualHost>secure</VirtualHost>
 </HTTPProxyConnection>
-    <RouteRule name="default">
-        <TargetEndpoint>echo</TargetEndpoint>
+    <RouteRule name="NoRoute">
     </RouteRule>
 </ProxyEndpoint>
