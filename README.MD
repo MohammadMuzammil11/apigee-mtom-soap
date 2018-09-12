@@ -6,7 +6,7 @@ A Company wants to be able to proxy a SOAP service that uses [MTOM](https://en.w
 
 ## Solution
 
-This repository contains a sample proxy that exposes a REST-SOAP-REST service. The original proxy was generated using [this](https://alvinalexander.com/java/jwarehouse/axis2-1.3/modules/samples/mtom/resources/MTOMSample.wsdl.shtml) WSDL.
+This repository contains a sample REST-SOAP-REST proxy. The original proxy was generated using [this](https://alvinalexander.com/java/jwarehouse/axis2-1.3/modules/samples/mtom/resources/MTOMSample.wsdl.shtml) WSDL.
 The proxy acts as a mirror, meaning the generated SOAP request will be returned to the client. The optimization from REST to SOAP+MTOM is implemented in a Java Callout Policy.
 
 ## GET /attachment
